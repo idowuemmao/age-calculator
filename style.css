@@ -51,10 +51,6 @@ input {
     font-size: 1rem;
 }
 
-.output {
-    gap: 0;
-}
-
 .outputs {
     font-weight: 1000;
     font-size: 3.5rem;
@@ -95,5 +91,46 @@ span {
     color: red;
     font-size: 0.5rem;
     font-style: italic;
+}
 
+@media (max-width:600px) {
+    .calculator {
+        width: auto;
+        padding: 1rem;
+    }
+
+    .divider {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+    }
+
+    input {
+        width: 4rem;
+        padding: 0.5rem;
+        font-size: 0.6rem;
+    }
+
+    label {
+        margin-bottom: 0.5rem;
+        font-size: 0.5rem;
+        font-weight: 1000;
+        letter-spacing: 0.1rem;
+    }
+
+    .submit {
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        font-weight: 1000;
+    }
+
+    .responses {
+        font-size: 0.35rem;
+    }
+
+    .outputs {
+        font-weight: 1000;
+        font-size: 2.5rem;
+    }
 }
