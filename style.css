@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf') format('ttf'),
+        url('./assets/fonts/Poppins-Italic.ttf') format('ttf'),
+        url('./assets/fonts/Poppins-Regular.ttf') format('ttf'),
+        url('./assets/fonts/Poppins-Bold.ttf') format('ttf'),
+        url('./assets/fonts/Poppins-BoldItalic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -8,15 +19,22 @@ body {
     background-color: azure;
     display: grid;
     place-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'CustomFont', Arial, sans-serif;
     height: 100vh;
 }
 
 .calculator {
     width: 35rem;
-    box-shadow: 0px 0px 5px 0px gray;
+    box-shadow: 0px 0px 5px 0px blueviolet;
     background-color: #ffffff;
     padding: 2rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: blueviolet;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .input {
@@ -53,7 +71,7 @@ input {
 
 .outputs {
     font-weight: 1000;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     margin-bottom: 0;
     font-style: italic;
 }
@@ -67,13 +85,10 @@ input {
 }
 
 .submit {
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     border-radius: 50%;
-    border: none;
+    /* border: none; */
     background-color: blueviolet;
-    color: white;
-    font-size: 2rem;
-    font-weight: 100;
 }
 
 .submit:hover {
@@ -120,7 +135,6 @@ span {
     }
 
     .submit {
-        padding: 0.5rem 1rem;
         font-size: 1.5rem;
         font-weight: 1000;
     }

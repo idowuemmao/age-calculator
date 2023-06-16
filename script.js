@@ -89,11 +89,6 @@ function Result() {
 
     }
 
-    if (myYear || myMonth || myDay === '') {
-        yearResult.textContent = '--'
-        monthResult.textContent = '--'
-        dayResult.textContent = '--'
-    }
 
 
 
