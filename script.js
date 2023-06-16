@@ -18,7 +18,7 @@ const today = new Date();
 const year = today.getFullYear();
 const month = today.getMonth();
 const day = today.getDate();
-const numberOfMonth = 12
+const numberOfMonth = 12;
 
 
 function Result() {
@@ -30,59 +30,69 @@ function Result() {
     }
 
     const numberOfDay = getDaysInMonth(myYear, myMonth)
-    console.log(numberOfDay);
-    if (true) {
-        if (myYear === '') {
-            response3.textContent = 'This field is required'
 
-        }
-        else {
-            if (myYear > year) {
-                response3.textContent = 'Enter a valid year'
-            }
-            else {
-                const actualYear = year - myYear
-                yearResult.textContent = actualYear
-                yearInput.value = ''
-                response3.textContent = ''
-            }
-        }
-        if (myMonth === '') {
-            response2.textContent = 'This field is required'
-        }
-        else {
-            if (myMonth > numberOfMonth) {
-                response2.textContent = 'Enter a valid month'
-            }
-            else {
-                const actualMonth = month - myMonth
-                const monthValue = parseFloat(actualMonth)
-                const absMonth = Math.abs(monthValue)
-                monthResult.textContent = absMonth
-                monthInput.value = ''
-                response2.textContent = ''
-            }
-        }
-        if (myDay === '') {
-            response1.textContent = 'This field is required'
-        }
-        else {
-            if (myDay > numberOfDay) {
-                response1.textContent = 'Enter a valid day'
-            }
-            else {
-                const actualDay = day - myDay
-                const dayValue = parseFloat(actualDay)
-                const absDay = Math.abs(dayValue)
-                dayResult.textContent = absDay
-                dayInput.value = ''
-                response1.textContent = ''
-            }
 
-        }
+    if (myYear === '') {
+        response3.textContent = 'This field is required'
     }
     else {
+        if (myYear > year) {
+            response3.textContent = 'Enter a valid year'
+            yearResult.textContent = '--'
+            monthResult.textContent = '--'
+            dayResult.textContent = '--'
+        }
+        else {
+            const actualYear = year - myYear
+            yearResult.textContent = actualYear
+            yearInput.value = ''
+            response3.textContent = ''
+        }
+    }
+    if (myMonth === '') {
+        response2.textContent = 'This field is required'
+    }
+    else {
+        if (myMonth > numberOfMonth) {
+            response2.textContent = 'Enter a valid month'
+            yearResult.textContent = '--'
+            monthResult.textContent = '--'
+            dayResult.textContent = '--'
+        }
+        else {
+            const actualMonth = month - myMonth
+            const monthValue = parseFloat(actualMonth)
+            const absMonth = Math.abs(monthValue)
+            monthResult.textContent = absMonth
+            monthInput.value = ''
+            response2.textContent = ''
+        }
+    }
+    if (myDay === '') {
+        response1.textContent = 'This field is required'
+    }
+    else {
+        if (myDay > numberOfDay) {
+            response1.textContent = 'Enter a valid day'
+            yearResult.textContent = '--'
+            monthResult.textContent = '--'
+            dayResult.textContent = '--'
+        }
+        else {
+            const actualDay = day - myDay
+            const dayValue = parseFloat(actualDay)
+            const absDay = Math.abs(dayValue)
+            dayResult.textContent = absDay
+            dayInput.value = ''
+            response1.textContent = ''
+        }
 
+    }
+
+    if (myYear || myMonth || myDay === '') {
+        yearResult.textContent = '--'
+        monthResult.textContent = '--'
+        dayResult.textContent = '--'
     }
 
 
