@@ -95,7 +95,7 @@ span {
 
 @media (max-width:600px) {
     .calculator {
-        width: auto;
+        width: 20rem;
         padding: 1rem;
     }
 
